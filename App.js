@@ -9,11 +9,12 @@ export default function App() {
       <Text>Open up App.js to start working </Text>
       <StatusBar style="auto" />
     </View>
-    
+
   );
 }
 
 const styles = StyleSheet.create({
+  
   container: {
     flex: 1,
     backgroundColor: '#fff',
