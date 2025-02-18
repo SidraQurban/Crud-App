@@ -8,6 +8,7 @@ export default function App() {
       <Text>Open up App.js to start working </Text>
       <StatusBar style="auto" />
     </View>
+    
   );
 }
 
