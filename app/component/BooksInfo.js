@@ -20,8 +20,10 @@ useEffect(()=>{
       <Text>BooksInfo</Text>
      {
         data.length ? 
-        data.map (()=>
-        <View></View>)
+        data.map ((item)=>
+        <View>
+            <Text>{item.author}</Text>
+        </View>)
         :null
      }
     </View>
