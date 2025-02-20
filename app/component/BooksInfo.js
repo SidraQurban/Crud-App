@@ -1,13 +1,32 @@
 import { View, Text,StyleSheet } from 'react-native'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
 
 const BooksInfo = () => {
+
+const [data,setData] = useState([]);
+const getAPIData =async () =>{
+    const url="http://10.0.2.2:3000/books";
+    let result = await fetch(url);
+    result = result.json();
+console.log(result);
+    setData(result);
+}
+useEffect(()=>{
+    getAPIData();
+},[])
   return (
     <View style={styles.container}>
       <Text>BooksInfo</Text>
+      {data.length
+        ? data.map((item) => (
+            <View>
+              <Text style={styles.text}>{item.bookname}</Text>
+            </View>
+          ))
+        : null}
     </View>
-  )
+  );
 }
 
 export default BooksInfo;
