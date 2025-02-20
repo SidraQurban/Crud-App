@@ -1,6 +1,6 @@
 import { View, Text,StyleSheet, FlatList } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import { responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
+import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
 
 const BooksInfo = () => {
 
@@ -18,13 +18,19 @@ useEffect(()=>{
   return (
     <View style={styles.container}>
       <Text>BooksInfo</Text>
-       {data.length ? 
-       <FlatList
-       data={data}
-       renderItem={({item})=>
-    <View><Text>{item.bookname}</Text></View>}
-       />
-       :null}
+      {data.length ? (
+        <FlatList
+          data={data}
+          keyExtractor={(item) => item.id}
+          numColumns={2}
+          renderItem={({ item }) => (
+            <View style={styles.bookContainer}>
+              <Text style={styles.bookname}>{item.bookname}</Text>
+              <Text style={styles.author}>{item.author}</Text>
+            </View>
+          )}
+        />
+      ) : null}
     </View>
   );
 }
@@ -33,8 +39,22 @@ export default BooksInfo;
 
 const styles = StyleSheet.create({
   container: {
-     padding:responsiveWidth(1),
-     backgroundColor: '#edede9', 
-     height:responsiveHeight(100)  
-    },
+    padding: responsiveWidth(1),
+    backgroundColor: "#edede9",
+    height: responsiveHeight(100),
+  },
+  bookContainer: {
+    flex: 1,
+    marginTop:responsiveHeight(3)
+  },
+  bookname:{
+    fontSize:responsiveFontSize(1.8),
+    fontWeight:"bold",
+     textAlign:"center"
+  },
+  author : {
+    fontSize:responsiveFontSize(1.5),
+    color:"#6c757d",
+    textAlign:"center"
+  }
 });
