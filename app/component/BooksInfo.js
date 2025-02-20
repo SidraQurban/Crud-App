@@ -21,6 +21,8 @@ useEffect(()=>{
        {data.length ? 
        <FlatList
        data={data}
+       renderItem={({item})=>
+    <View><Text>{item.bookname}</Text></View>}
        />
        :null}
     </View>
