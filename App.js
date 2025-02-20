@@ -5,8 +5,8 @@ import 'react-native-gesture-handler';
 export default function App() {  
   return (
     <View style={styles.container}>   
-      <Text>Open up App.js to start working </Text>    
-      
+      <Text>Open up App.js to start working </Text>     
+
       <StatusBar style="auto" />
     </View>
   );
