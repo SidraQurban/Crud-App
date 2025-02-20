@@ -18,11 +18,6 @@ useEffect(()=>{
   return (
     <View style={styles.container}>
       <Text>BooksInfo</Text>
-      {data.length ? (
-        <View>
-          <Text style={styles.text}>{bookname}</Text>
-        </View>
-      ) : null}
     </View>
   );
 }
