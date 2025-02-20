@@ -18,8 +18,12 @@ useEffect(()=>{
   return (
     <View style={styles.container}>
       <Text>BooksInfo</Text>
-      <data.length ? 
-      data.map((item)=>)
+     {
+        data.length ? 
+        data.map (()=>
+        <View></View>)
+        :null
+     }
     </View>
   );
 }
