@@ -22,7 +22,7 @@ useEffect(()=>{
         data.length ? 
         data.map ((item)=>
         <View>
-            <Text>{item.author}</Text>
+            <Text>{item.bookname}</Text>
         </View>)
         :null
      }
