@@ -20,7 +20,7 @@ useEffect(()=>{
       <Text>BooksInfo</Text>
       {data.length ? (
         <View>
-          <Text style={styles.text}>{item.bookname}</Text>
+          <Text style={styles.text}>{bookname}</Text>
         </View>
       ) : null}
     </View>
