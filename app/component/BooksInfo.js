@@ -15,11 +15,12 @@ const getAPIData =async () =>{
 
 useEffect(()=>{
     getAPIData();
-    
+
 },[])
 
   return (
     <View style={styles.container}>
+      
       <Text>BooksInfo</Text>
       {data.length ? (
         <FlatList
