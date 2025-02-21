@@ -20,7 +20,6 @@ useEffect(()=>{
 
   return (
     <View style={styles.container}>
-  
       <Text>BooksInfo</Text>
       {data.length ? (
         <FlatList
