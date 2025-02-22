@@ -38,7 +38,6 @@ getAPIData();
 
 export default BooksInfo;
 
-
 const styles = StyleSheet.create({
   container: {
     padding: responsiveWidth(1),
