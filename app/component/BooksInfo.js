@@ -49,12 +49,13 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop:responsiveHeight(3)
   },
-  
+
   bookname:{
     fontSize:responsiveFontSize(1.8),
     fontWeight:"bold",
      textAlign:"center"
   },
+  
   author : {
     fontSize:responsiveFontSize(1.5),
     color:"#6c757d",
