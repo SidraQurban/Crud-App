@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
 
 const BooksInfo = () => {
+  
 const [data,setData] = useState([]);    
 
 const getAPIData =async () =>{
@@ -14,7 +15,7 @@ const getAPIData =async () =>{
 }
 
 useEffect(()=>{
-  
+
     getAPIData();
 
 },[])
