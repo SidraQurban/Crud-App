@@ -30,7 +30,8 @@ getAPIData();
             </View>
           )}
         />
-      ) : null}
+      ) 
+      : null}
     </View>
   );
 }
