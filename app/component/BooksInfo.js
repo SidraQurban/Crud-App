@@ -44,11 +44,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#edede9",
     height: responsiveHeight(100),
   },
-  
+
   bookContainer: {
     flex: 1,
     marginTop:responsiveHeight(3)
   },
+  
   bookname:{
     fontSize:responsiveFontSize(1.8),
     fontWeight:"bold",
