@@ -53,9 +53,9 @@ const styles = StyleSheet.create({
   bookname:{
     fontSize:responsiveFontSize(1.8),
     fontWeight:"bold",
-     textAlign:"center"
+    textAlign:"center"
   },
-  
+
   author : {
     fontSize:responsiveFontSize(1.5),
     color:"#6c757d",
