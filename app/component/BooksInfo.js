@@ -14,6 +14,7 @@ const getAPIData =async () =>{
 }
 
 useEffect(()=>{
+  
     getAPIData();
 
 },[])
