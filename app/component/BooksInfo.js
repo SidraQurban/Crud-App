@@ -6,7 +6,7 @@ import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-nat
 const BooksInfo = () => {
 
 
-  
+
 
 const [data,setData] = useState([]);   
 const getAPIData =async () =>{    
