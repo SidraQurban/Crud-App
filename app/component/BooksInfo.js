@@ -2,8 +2,7 @@ import { View, Text,StyleSheet, FlatList } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
 
-const BooksInfo = () => {
-  
+const BooksInfo = () => {  
 const [data,setData] = useState([]);   
 const getAPIData =async () =>{    
 const url="http://10.0.2.2:3000/books";   
