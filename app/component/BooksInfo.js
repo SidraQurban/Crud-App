@@ -19,7 +19,7 @@ getAPIData();
 
   return(
     <View style={styles.container}>
-      <Text> BooksInfo </Text>
+    
       {data.length ? (
         <FlatList
           data={data}
