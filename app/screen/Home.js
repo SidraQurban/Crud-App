@@ -3,6 +3,7 @@ import React from 'react'
 import { responsiveFontSize, responsiveWidth } from 'react-native-responsive-dimensions';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import BooksInfo from '../component/BooksInfo';
+import AddBooks from '../component/AddBooks';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       </View>
     </SafeAreaView>
      <BooksInfo />
+     <AddBooks/>
      <StatusBar barStyle="light-content" backgroundColor="#000" />
     </>
   );
