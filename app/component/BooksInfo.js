@@ -75,11 +75,11 @@ const styles = StyleSheet.create({
   },
   addcontainer: {
      marginTop:responsiveHeight(42),
-     marginLeft:responsiveWidth(68),
+     marginLeft:responsiveWidth(73),
      backgroundColor:"blue",
-     height:responsiveHeight(15),
-     width:responsiveHeight(15),
-     borderRadius:responsiveHeight(13),
+     height:responsiveHeight(12),
+     width:responsiveHeight(12),
+     borderRadius:responsiveHeight(6),
      alignItems:"center",
      justifyContent:"center"  
     
