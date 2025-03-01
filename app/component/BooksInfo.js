@@ -38,7 +38,7 @@ getAPIData();
       ) 
       : null}
       {/* AddBooks */}
-      <View>
+      <View style={styles.addcontainer}>
         <TouchableOpacity>
         <Ionicons name="add" size={20}/>
         </TouchableOpacity>
@@ -72,5 +72,8 @@ const styles = StyleSheet.create({
     fontSize:responsiveFontSize(1.5),
     color:"#6c757d",
     textAlign:"center"
+  },
+  addcontainer:{
+
   }
 });
