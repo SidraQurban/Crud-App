@@ -41,9 +41,9 @@ getAPIData();
       <View style={styles.addcontainer}>
         <TouchableOpacity>
         <MaterialIcons name="add" size={30} style={styles.add}/>
-        <Modal visible={true} transparent={true} style={{marginTop:responsiveHeight(10)}}>
+        <Modal visible={true} transparent={true}>
           <View>
-            <View>
+            <View style={styles.centerText}>
               <Text>Adding Books</Text>
             </View>
           </View>
@@ -93,5 +93,10 @@ const styles = StyleSheet.create({
   },
   add: {
     fontWeight:"bold",
+  },
+  centerText: {
+    marginTop:responsiveHeight(40),
+    justifyContent:"center",
+    alignItems:"center",
   }
 });
