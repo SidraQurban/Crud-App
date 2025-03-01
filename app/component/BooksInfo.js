@@ -2,7 +2,7 @@ import { View, Text,StyleSheet, FlatList, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
 import AddBooks from './AddBooks';
-import {Ionicons} from "react-native-vector-icons";
+import {MaterialIcons} from "react-native-vector-icons";
 
 const BooksInfo = () => {
 
@@ -40,7 +40,7 @@ getAPIData();
       {/* AddBooks */}
       <View style={styles.addcontainer}>
         <TouchableOpacity>
-        <Ionicons name="add" size={30} style={styles.add}/>
+        <MaterialIcons name="add" size={30} style={styles.add}/>
         </TouchableOpacity>
       </View>
      </View>
