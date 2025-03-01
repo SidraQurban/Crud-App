@@ -1,4 +1,4 @@
-import { View, Text,StyleSheet, FlatList, TouchableOpacity, Modal } from 'react-native'
+import { View, Text,StyleSheet, FlatList, TouchableOpacity, Modal, TextInput, Button } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
 import AddBooks from './AddBooks';
@@ -8,6 +8,7 @@ const BooksInfo = () => {
 
 const [data,setData] = useState([]);
 const[modalVisible, setModalVisible] = useState(false);
+const[name,setName] = useState('');
 const getAPIData =async () =>{
 const url="http://10.0.2.2:3000/books";
     let result = await fetch(url);
@@ -20,44 +21,53 @@ useEffect(()=>{
 getAPIData(); 
 },[])  
 
-  return(
+  return (
     <View style={styles.container}>
-     <View>
-     {data.length ? (
-        <FlatList
-          data={data}
-          showsVerticalScrollIndicator={false}
-          keyExtractor={(item) => item.id}
-          numColumns={2}
-          renderItem={({ item }) => (
-            <View style={styles.bookContainer}>
-              <Text style={styles.bookname}>{item.bookname}</Text>
-              <Text style={styles.author}>{item.author}</Text>
-            </View>
-          )}
-        />
-      ) 
-      : null}
+      <View>
+        {data.length ? (
+          <FlatList
+            data={data}
+            showsVerticalScrollIndicator={false}
+            keyExtractor={(item) => item.id}
+            numColumns={2}
+            renderItem={({ item }) => (
+              <View style={styles.bookContainer}>
+                <Text style={styles.bookname}>{item.bookname}</Text>
+                <Text style={styles.author}>{item.author}</Text>
+              </View>
+            )}
+          />
+        ) : null}
 
-      {/* AddBooks */}
-      <View style={styles.addcontainer}>
-        <TouchableOpacity onPress={()=>setModalVisible(true)}>
-        <MaterialIcons name="add" size={30} style={styles.add}/>
-        </TouchableOpacity>
+        {/* AddBooks */}
+        <View style={styles.addcontainer}>
+          <TouchableOpacity onPress={() => setModalVisible(true)}>
+            <MaterialIcons name="add" size={30} style={styles.add} />
+          </TouchableOpacity>
 
-        {/* Modal */}
-        <Modal visible={modalVisible} transparent={true} animationType="slide">
-          <View style={styles.modal}>
-            <View style={styles.centerText}>
-              <Text>Adding Books</Text>
-              <TouchableOpacity onPress={()=>setModalVisible(false)} style={styles.addButton}>
-                <Text>Add</Text>
-              </TouchableOpacity>
+          {/* Modal */}
+          <Modal
+            visible={modalVisible}
+            transparent={true}
+            animationType="slide"
+          >
+            <View style={styles.modal}>
+              <View style={styles.centerText}>
+                <Text>Adding Books</Text>
+                <TextInput
+                  style={styles.input}
+                  value={name}
+                  onChangeText={(text) => setName(text)}
+                  placeholder="Enter Book Name"
+                />
+                <TouchableOpacity onPress={() => setModalVisible(false)}>
+                  <Text>Add</Text>
+                </TouchableOpacity>
+              </View>
             </View>
-          </View>
-        </Modal>
+          </Modal>
+        </View>
       </View>
-     </View>
     </View>
   );
 }
@@ -114,6 +124,13 @@ const styles = StyleSheet.create({
     height:responsiveHeight(40),
     width:responsiveWidth(80),
     alignItems:"center",
+  },
+  input: {
+      borderColor:"skyblue",
+      borderWidth:1,
+      padding:10,
+      marginBottom:10,
+      width:responsiveWidth(70),
   },
   addButton: {
     
