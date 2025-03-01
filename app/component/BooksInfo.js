@@ -24,6 +24,7 @@ getAPIData();
       {data.length ? (
         <FlatList
           data={data}
+          showsVerticalScrollIndicator={false}
           keyExtractor={(item) => item.id}
           numColumns={2}
           renderItem={({ item }) => (
