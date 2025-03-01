@@ -42,7 +42,7 @@ getAPIData();
         <TouchableOpacity>
         <MaterialIcons name="add" size={30} style={styles.add}/>
         <Modal visible={true} transparent={true}>
-          <View>
+          <View style={styles.modal}>
             <View style={styles.centerText}>
               <Text>Adding Books</Text>
             </View>
@@ -59,9 +59,11 @@ export default BooksInfo;
 
 const styles = StyleSheet.create({
   container: {
+    flex:1,
     padding: responsiveWidth(1),
     backgroundColor: "#edede9",
     height: responsiveHeight(100),
+
   },
 
   bookContainer: {
@@ -95,8 +97,12 @@ const styles = StyleSheet.create({
     fontWeight:"bold",
   },
   centerText: {
-    marginTop:responsiveHeight(40),
+    flex: 1,
+    // marginTop:responsiveHeight(40),
     justifyContent:"center",
     alignItems:"center",
+  },
+  modal: {
+   backgroundColor:"#FFFFFF",
   }
 });
