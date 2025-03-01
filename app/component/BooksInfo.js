@@ -30,7 +30,7 @@ const saveData= async()=>{
     return false
   }
   if(!authorName){
-    setBookNameError(true)
+    setAuthorNmaeError(true)
   }
   if(!bookName){
     return false
