@@ -40,7 +40,7 @@ getAPIData();
       {/* AddBooks */}
       <View style={styles.addcontainer}>
         <TouchableOpacity>
-        <Ionicons name="add" size={30}/>
+        <Ionicons name="add" size={30} style={styles.add}/>
         </TouchableOpacity>
       </View>
      </View>
