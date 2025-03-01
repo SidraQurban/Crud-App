@@ -73,7 +73,15 @@ const styles = StyleSheet.create({
     color:"#6c757d",
     textAlign:"center"
   },
-  addcontainer:{
-
+  addcontainer: {
+     marginTop:responsiveHeight(42),
+     marginLeft:responsiveWidth(68),
+     backgroundColor:"blue",
+     height:responsiveHeight(15),
+     width:responsiveHeight(15),
+     borderRadius:responsiveHeight(13),
+     alignItems:"center",
+     justifyContent:"center"  
+    
   }
 });
