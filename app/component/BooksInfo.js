@@ -1,8 +1,8 @@
-import { View, Text,StyleSheet, FlatList } from 'react-native'
+import { View, Text,StyleSheet, FlatList, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
 import AddBooks from './AddBooks';
-import {Ionicons} from"react-native-vector-icons";
+import {Ionicons} from "react-native-vector-icons";
 
 const BooksInfo = () => {
 
@@ -39,7 +39,9 @@ getAPIData();
       : null}
       {/* AddBooks */}
       <View>
-       <Ionicons name="add" size={20}/>
+        <TouchableOpacity>
+        <Ionicons name="add" size={20}/>
+        </TouchableOpacity>
       </View>
      </View>
     </View>
