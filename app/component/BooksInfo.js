@@ -9,9 +9,9 @@ const BooksInfo = () => {
 const [data,setData] = useState([]);
 const[modalVisible, setModalVisible] = useState(false);
 const[bookName,setBookName] = useState('');
-const[authorName,setAuthorNmae] = useState('');
+const[authorName,setAuthorName] = useState('');
 const[bookNameError,setBookNameError] = useState('');
-const[authorNameError,setAuthorNmaeError] = useState('');
+const[authorNameError,setAuthorNameError] = useState('');
 
 const getAPIData =async () =>{
 const url="http://10.0.2.2:3000/books";
@@ -23,13 +23,8 @@ const url="http://10.0.2.2:3000/books";
 
 const saveData= async()=>{
 
-  if(!bookName){
-    setBookNameError(true)
-  }
- 
-  if(!authorName){
-    setAuthorNmaeError(true)
-  }
+  setBookNameError(!bookName ? true : false);
+  setAuthorNameError(!authorName ? true : false);
   if(!bookName || !authorName){
     return false
   }
@@ -37,18 +32,20 @@ const saveData= async()=>{
   setModalVisible(false);
   
   const url = "http://10.0.2.2:3000/books";
-  let result = await fetch(url,{
-    "method":"POST",
-    header: {
-      "Content-Type":"application/json",
+  let result = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify({bookName,authorName})
+    body: JSON.stringify({ bookname: bookName, author: authorName }),
   });
   result = await result.json();
   if(result){
     console.warn("Book added successfully");
+    setData([...data, result]);
     
   }
+  
 }
 
 useEffect(()=>{ 
@@ -102,10 +99,10 @@ getAPIData();
                 <TextInput
                   style={styles.input}
                   value={authorName}
-                  onChangeText={(text) => setAuthorNmae(text)}
+                  onChangeText={(text) => setAuthorName(text)}
                   placeholder="Enter Author Name"
                 />
-                {bookNameError ? (
+                {authorNameError ? (
                   <Text style={styles.errorText}>
                     Please enter Valid Author Name
                   </Text>
