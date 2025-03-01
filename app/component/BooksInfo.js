@@ -20,8 +20,8 @@ getAPIData();
 
   return(
     <View style={styles.container}>
-    
-      {data.length ? (
+     <View>
+     {data.length ? (
         <FlatList
           data={data}
           showsVerticalScrollIndicator={false}
@@ -36,9 +36,11 @@ getAPIData();
         />
       ) 
       : null}
+      {/*  */}
       <View>
         <Text>hi</Text>
       </View>
+     </View>
     </View>
   );
 }
@@ -49,7 +51,7 @@ const styles = StyleSheet.create({
   container: {
     padding: responsiveWidth(1),
     backgroundColor: "#edede9",
-    height: responsiveHeight(80),
+    height: responsiveHeight(100),
   },
 
   bookContainer: {
