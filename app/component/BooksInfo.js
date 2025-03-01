@@ -41,7 +41,7 @@ getAPIData();
       <View style={styles.addcontainer}>
         <TouchableOpacity>
         <MaterialIcons name="add" size={30} style={styles.add}/>
-        <Modal accessibilityViewIsModal={true}>
+        <Modal visible={true}>
           <View>
             <View>
               <Text>Adding Books</Text>
