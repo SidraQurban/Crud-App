@@ -2,6 +2,7 @@ import { View, Text,StyleSheet, FlatList } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
 import AddBooks from './AddBooks';
+import {Ionicons} from"react-native-vector-icons";
 
 const BooksInfo = () => {
 
@@ -38,7 +39,7 @@ getAPIData();
       : null}
       {/* AddBooks */}
       <View>
-        <Text>hi</Text>
+       <Ionicons name="add" size={20}/>
       </View>
      </View>
     </View>
