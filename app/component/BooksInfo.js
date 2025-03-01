@@ -8,13 +8,50 @@ const BooksInfo = () => {
 
 const [data,setData] = useState([]);
 const[modalVisible, setModalVisible] = useState(false);
-const[name,setName] = useState('');
+const[bookName,setBookName] = useState('');
+const[authorName,setAuthorNmae] = useState('');
+const[bookNameError,setBookNameError] = useState('');
+const[authorNameError,setAuthorNmaeError] = useState('');
+
 const getAPIData =async () =>{
 const url="http://10.0.2.2:3000/books";
     let result = await fetch(url);
     result = await result.json();
     console.log(result); 
     setData(result);    
+}
+
+const saveData= async()=>{
+
+  if(!bookName){
+    setBookNameError(true)
+  }
+  if(!bookName){
+    return false
+  }
+  if(!authorName){
+    setBookNameError(true)
+  }
+  if(!bookName){
+    return false
+  }
+  console.warn(bookName);
+  console.warn(authorName);
+  setModalVisible(false);
+  
+  const url = "http://10.0.2.2:3000/books";
+  let result = await fetch(url,{
+    "method":"POST",
+    header: {
+      "Content-Type":"application/json",
+    },
+    body: JSON.stringify({bookName,authorName})
+  });
+  result = await result.json();
+  if(result){
+    console.warn("Book added successfully");
+    
+  }
 }
 
 useEffect(()=>{ 
@@ -56,12 +93,18 @@ getAPIData();
                 <Text>Adding Books</Text>
                 <TextInput
                   style={styles.input}
-                  value={name}
-                  onChangeText={(text) => setName(text)}
+                  value={bookName}
+                  onChangeText={(text) => setBookName(text)}
                   placeholder="Enter Book Name"
                 />
+                 <TextInput
+                  style={styles.input}
+                  value={authorName}
+                  onChangeText={(text) => setAuthorNmae(text)}
+                  placeholder="Enter Author Name"
+                />
                 <TouchableOpacity onPress={() => setModalVisible(false)}>
-                  <Text>Add</Text>
+                  <Button title="Add" onPress={saveData}/>
                 </TouchableOpacity>
               </View>
             </View>
@@ -131,6 +174,7 @@ const styles = StyleSheet.create({
       padding:10,
       marginBottom:10,
       width:responsiveWidth(70),
+      fontSize:responsiveFontSize(2)
   },
   addButton: {
     
