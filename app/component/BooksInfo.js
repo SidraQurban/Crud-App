@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     textAlign:"center"
   },
   addcontainer: {
-     marginTop:responsiveHeight(42),
+     marginTop:responsiveHeight(44.9),
      marginLeft:responsiveWidth(73),
      backgroundColor:"blue",
      height:responsiveHeight(12),
