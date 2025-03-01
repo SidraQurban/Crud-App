@@ -7,6 +7,7 @@ import {MaterialIcons} from "react-native-vector-icons";
 const BooksInfo = () => {
 
 const [data,setData] = useState([]);
+const[modalVisible, setModalVisible] = useState(false);
 const getAPIData =async () =>{
 const url="http://10.0.2.2:3000/books";
     let result = await fetch(url);
@@ -37,18 +38,24 @@ getAPIData();
         />
       ) 
       : null}
+
       {/* AddBooks */}
       <View style={styles.addcontainer}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>setModalVisible(true)}>
         <MaterialIcons name="add" size={30} style={styles.add}/>
-        <Modal visible={true} transparent={true}>
+        </TouchableOpacity>
+
+        {/* Modal */}
+        <Modal visible={modalVisible} transparent={true} animationType="slide">
           <View style={styles.modal}>
             <View style={styles.centerText}>
               <Text>Adding Books</Text>
+              <TouchableOpacity onPress={()=>setModalVisible(false)} style={styles.addButton}>
+                <Text>Add</Text>
+              </TouchableOpacity>
             </View>
           </View>
         </Modal>
-        </TouchableOpacity>
       </View>
      </View>
     </View>
@@ -96,13 +103,19 @@ const styles = StyleSheet.create({
   add: {
     fontWeight:"bold",
   },
-  centerText: {
+  modal: {
     flex: 1,
-    // marginTop:responsiveHeight(40),
-    justifyContent:"center",
+    backgroundColor: "rgba(0, 0, 0, 0.5)", 
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  centerText: {
+    backgroundColor:"#fff",
+    height:responsiveHeight(40),
+    width:responsiveWidth(80),
     alignItems:"center",
   },
-  modal: {
-   backgroundColor:"#FFFFFF",
+  addButton: {
+    
   }
 });
