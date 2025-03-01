@@ -28,9 +28,7 @@ const saveData= async()=>{
   if(!bookName || !authorName){
     return false
   }
- 
-  setModalVisible(false);
-  
+   
   const url = "http://10.0.2.2:3000/books";
   let result = await fetch(url, {
     method: "POST",
@@ -45,7 +43,8 @@ const saveData= async()=>{
     setData([...data, result]);
     
   }
-  
+  getAPIData();
+  setModalVisible(false);
 }
 
 useEffect(()=>{ 
