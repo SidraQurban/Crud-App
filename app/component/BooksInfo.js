@@ -26,17 +26,14 @@ const saveData= async()=>{
   if(!bookName){
     setBookNameError(true)
   }
-  if(!bookName){
-    return false
-  }
+ 
   if(!authorName){
     setAuthorNmaeError(true)
   }
-  if(!bookName){
+  if(!bookName || !authorName){
     return false
   }
-  console.warn(bookName);
-  console.warn(authorName);
+ 
   setModalVisible(false);
   
   const url = "http://10.0.2.2:3000/books";
@@ -97,14 +94,24 @@ getAPIData();
                   onChangeText={(text) => setBookName(text)}
                   placeholder="Enter Book Name"
                 />
-                 <TextInput
+                {bookNameError ? (
+                  <Text style={styles.errorText}>
+                    Please enter Valid Book Name
+                  </Text>
+                ) : null}
+                <TextInput
                   style={styles.input}
                   value={authorName}
                   onChangeText={(text) => setAuthorNmae(text)}
                   placeholder="Enter Author Name"
                 />
+                {bookNameError ? (
+                  <Text style={styles.errorText}>
+                    Please enter Valid Author Name
+                  </Text>
+                ) : null}
                 <TouchableOpacity onPress={() => setModalVisible(false)}>
-                  <Button title="Add" onPress={saveData}/>
+                  <Button title="Add" onPress={saveData} />
                 </TouchableOpacity>
               </View>
             </View>
@@ -143,7 +150,7 @@ const styles = StyleSheet.create({
     textAlign:"center"
   },
   addcontainer: {
-     marginTop:responsiveHeight(44.9),
+     marginTop:responsiveHeight(20),
      marginLeft:responsiveWidth(73),
      backgroundColor:"blue",
      height:responsiveHeight(12),
@@ -175,6 +182,12 @@ const styles = StyleSheet.create({
       marginBottom:10,
       width:responsiveWidth(70),
       fontSize:responsiveFontSize(2)
+  },
+  errorText:{
+    color:"#ff0000",
+    marginLeft:responsiveWidth(-22),
+    marginTop:responsiveHeight(-1),
+    marginBottom:responsiveHeight(2)
   },
   addButton: {
     
