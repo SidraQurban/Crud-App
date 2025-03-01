@@ -1,4 +1,4 @@
-import { View, Text,StyleSheet, FlatList, TouchableOpacity } from 'react-native'
+import { View, Text,StyleSheet, FlatList, TouchableOpacity, Modal } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
 import AddBooks from './AddBooks';
@@ -41,6 +41,13 @@ getAPIData();
       <View style={styles.addcontainer}>
         <TouchableOpacity>
         <MaterialIcons name="add" size={30} style={styles.add}/>
+        <Modal accessibilityViewIsModal={true}>
+          <View>
+            <View>
+              <Text>Adding Books</Text>
+            </View>
+          </View>
+        </Modal>
         </TouchableOpacity>
       </View>
      </View>
