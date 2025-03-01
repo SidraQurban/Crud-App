@@ -1,6 +1,7 @@
 import { View, Text,StyleSheet, FlatList } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
+import AddBooks from './AddBooks';
 
 const BooksInfo = () => {
 
@@ -34,6 +35,9 @@ getAPIData();
         />
       ) 
       : null}
+      <View>
+        <Text>hi</Text>
+      </View>
     </View>
   );
 }
@@ -44,7 +48,7 @@ const styles = StyleSheet.create({
   container: {
     padding: responsiveWidth(1),
     backgroundColor: "#edede9",
-    height: responsiveHeight(100),
+    height: responsiveHeight(80),
   },
 
   bookContainer: {
