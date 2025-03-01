@@ -83,5 +83,8 @@ const styles = StyleSheet.create({
      alignItems:"center",
      justifyContent:"center"  
     
+  },
+  add: {
+    fontWeight:"bold",
   }
 });
