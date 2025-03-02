@@ -60,7 +60,6 @@ getAPIData();
         {data.length ? (
           <FlatList
             data={data}
-            showsVerticalScrollIndicator={true}
             keyExtractor={(item) => item.id}
             numColumns={2}
             contentContainerStyle={{ paddingBottom: responsiveHeight(8) }}
@@ -68,6 +67,15 @@ getAPIData();
               <View style={styles.bookContainer}>
                 <Text style={styles.bookname}>{item.bookname}</Text>
                 <Text style={styles.author}>{item.author}</Text>
+                {/* Edit and delete button */}
+                <View style={styles.actionbtn}>
+                  <TouchableOpacity>
+                    <MaterialIcons name="edit" size={25} color="blue"/>
+                  </TouchableOpacity>
+                  <TouchableOpacity>
+                    <MaterialIcons name="delete" size={25} color="red" />
+                  </TouchableOpacity>
+                </View>
               </View>
             )}
           />
@@ -153,14 +161,22 @@ export default BooksInfo;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: responsiveWidth(1),
+    padding: responsiveWidth(2),
     backgroundColor: "#edede9",
-    height: responsiveHeight(100),
+  },
+  actionbtn: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    marginTop: responsiveHeight(1),
   },
 
   bookContainer: {
     flex: 1,
-    marginTop: responsiveHeight(3),
+    margin: responsiveHeight(2),
+    backgroundColor:"#fff",
+    padding: responsiveWidth(2),
+    borderRadius: responsiveWidth(4),
+    elevation: 3,
   },
 
   bookname: {
@@ -173,19 +189,19 @@ const styles = StyleSheet.create({
     fontSize: responsiveFontSize(1.5),
     color: "#6c757d",
     textAlign: "center",
+    marginBottom: responsiveHeight(1),
   },
   addcontainer: {
     position: "absolute",
-    bottom: responsiveHeight(1),
+    bottom: responsiveHeight(3),
     right: responsiveWidth(5),
     backgroundColor: "blue",
-    height: responsiveHeight(6),
-    width: responsiveHeight(6),
-    borderRadius: responsiveHeight(3),
-    elevation: 5,
-    shadowColor: "#000",
+    height: responsiveHeight(7),
+    width: responsiveHeight(7),
+    borderRadius: responsiveHeight(3.5),
     alignItems: "center",
     justifyContent: "center",
+    elevation: 5,
   },
   add: {
     fontWeight: "bold",
