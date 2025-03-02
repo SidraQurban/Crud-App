@@ -2,14 +2,16 @@ import { View, Text,StyleSheet, FlatList, TouchableOpacity, Modal, TextInput, Bu
 import React, { useEffect, useState } from 'react'
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
 import AddBooks from './AddBooks';
-import {MaterialIcons} from "react-native-vector-icons";
+import {MaterialIcons,Entypo} from "react-native-vector-icons";
 
 const BooksInfo = () => {
 
 const [data,setData] = useState([]);
 const[modalVisible, setModalVisible] = useState(false);
+const[uploadImage,setUploadImage] = useState('');
 const[bookName,setBookName] = useState('');
 const[authorName,setAuthorName] = useState('');
+const[uploadImageError,setUploadImageError] = useState('');
 const[bookNameError,setBookNameError] = useState('');
 const[authorNameError,setAuthorNameError] = useState('');
 
@@ -25,7 +27,8 @@ const saveData= async()=>{
 
   setBookNameError(!bookName ? true : false);
   setAuthorNameError(!authorName ? true : false);
-  if(!bookName || !authorName){
+  setUploadImageError(!uploadImage ? true : false);
+  if( !uploadImage || !bookName || !authorName){
     return false
   }
    
@@ -84,7 +87,21 @@ getAPIData();
           >
             <View style={styles.modal}>
               <View style={styles.centerText}>
-                <Text>Adding Books</Text>
+                <TouchableOpacity>
+                  <Entypo name="cross" size={30}/>
+                </TouchableOpacity>
+                {/* image */}
+              {/* <TextInput
+                  style={styles.input}
+                  value={uploadImage}
+                  onChangeText={(text) => setUploadImage(text)}
+                  placeholder="Upload Image..."
+                />
+                 {uploadImageError ? (
+                  <Text style={styles.errorText}>
+                    Please select Image
+                  </Text>
+                ) : null} */}
                 <TextInput
                   style={styles.input}
                   value={bookName}
@@ -109,9 +126,15 @@ getAPIData();
                   </Text>
                 ) : null}
                 <TouchableOpacity onPress={() => setModalVisible(false)}>
-                  <TouchableOpacity
-                    onPress={saveData} style={styles.addButton}>
-                    <Text>Add Book</Text>
+                  <TouchableOpacity onPress={saveData} style={styles.addButton}>
+                    <Text
+                      style={{
+                        fontSize: responsiveFontSize(2),
+                        fontWeight: "bold",
+                      }}
+                    >
+                      Add Book
+                    </Text>
                   </TouchableOpacity>
                 </TouchableOpacity>
               </View>
