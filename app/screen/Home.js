@@ -8,7 +8,7 @@ const Home = () => {
     <>
     <SafeAreaView>
       <View style={styles.container}>
-        <Text style={styles.mainText}>MyBookList </Text>
+        <Text style={styles.mainText}>📚MyBookList </Text>
       </View>
     </SafeAreaView>
      <BooksInfo />
