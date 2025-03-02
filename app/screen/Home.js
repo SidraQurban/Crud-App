@@ -1,6 +1,6 @@
 import { View, Text,StyleSheet, StatusBar } from 'react-native'
 import React from 'react'
-import { responsiveFontSize, responsiveWidth } from 'react-native-responsive-dimensions';
+import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import BooksInfo from '../component/BooksInfo';
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
     <>
     <SafeAreaView>
       <View style={styles.container}>
-        <Text style={styles.mainText}>📚MyBookList </Text>
+        <Text style={styles.mainText}>MyBookList 📚 </Text>
       </View>
     </SafeAreaView>
      <BooksInfo />
@@ -29,5 +29,6 @@ const styles = StyleSheet.create({
     fontSize: responsiveFontSize(2),
     fontWeight: 'bold',
     textAlign: 'center',
+    marginVertical:responsiveHeight(2)
    }
 });
