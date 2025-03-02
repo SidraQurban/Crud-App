@@ -60,6 +60,7 @@ getAPIData();
             showsVerticalScrollIndicator={true}
             keyExtractor={(item) => item.id}
             numColumns={2}
+            contentContainerStyle={{paddingBottom:responsiveHeight(8)}}
             renderItem={({ item }) => (
               <View style={styles.bookContainer}>
                 <Text style={styles.bookname}>{item.bookname}</Text>
