@@ -214,9 +214,10 @@ const styles = StyleSheet.create({
   },
   centerText: {
     backgroundColor: "#fff",
-    height: responsiveHeight(40),
+    padding: responsiveWidth(5),
+    borderRadius: 10,
+    elevation: 5,
     width: responsiveWidth(80),
-    alignItems: "center",
   },
   input: {
     borderColor: "skyblue",
@@ -238,15 +239,14 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
     width: responsiveWidth(70),
-    marginTop: responsiveHeight(2),
+    // marginTop: responsiveHeight(2),
     justifyContent: "center",
     alignItems: "center",
   },
   cancelbtn: {
-    position: "absolute",
-    left: responsiveWidth(72.5),
-    top: responsiveHeight(0.5),
+     alignSelf: "flex-end",
     backgroundColor: "red",
-    borderRadius: responsiveHeight(2),
+    borderRadius: responsiveHeight(5),
+    padding:responsiveHeight(1)
   },
 });
