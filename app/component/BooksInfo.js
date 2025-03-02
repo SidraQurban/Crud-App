@@ -8,10 +8,10 @@ const BooksInfo = () => {
 
 const [data,setData] = useState([]);
 const[modalVisible, setModalVisible] = useState(false);
-const[uploadImage,setUploadImage] = useState('');
+// const[uploadImage,setUploadImage] = useState('');
 const[bookName,setBookName] = useState('');
 const[authorName,setAuthorName] = useState('');
-const[uploadImageError,setUploadImageError] = useState('');
+// const[uploadImageError,setUploadImageError] = useState('');
 const[bookNameError,setBookNameError] = useState('');
 const[authorNameError,setAuthorNameError] = useState('');
 
@@ -24,14 +24,13 @@ const url="http://10.0.2.2:3000/books";
 }
 
 const saveData= async()=>{
-
   setBookNameError(!bookName ? true : false);
   setAuthorNameError(!authorName ? true : false);
-  setUploadImageError(!uploadImage ? true : false);
-  if( !uploadImage || !bookName || !authorName){
-    return false
+  // setUploadImageError(!uploadImage ? true : false);
+  if (!bookName || !authorName) {
+    return false;
   }
-   
+
   const url = "http://10.0.2.2:3000/books";
   let result = await fetch(url, {
     method: "POST",
@@ -41,13 +40,14 @@ const saveData= async()=>{
     body: JSON.stringify({ bookname: bookName, author: authorName }),
   });
   result = await result.json();
-  if(result){
+  if (result) {
     console.warn("Book added successfully");
-    setData([...data, result]);
-    
+    await getAPIData();
+    setBookName("");
+    setAuthorName("");
+    // setUploadImage("");
+    setModalVisible(false);
   }
-  getAPIData();
-  setModalVisible(false);
 }
 
 useEffect(()=>{ 
