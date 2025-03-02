@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
   bookContainer: {
     flex: 1,
     margin: responsiveHeight(2),
-    backgroundColor:"#fff",
+    backgroundColor: "#fff",
     padding: responsiveWidth(2),
     borderRadius: responsiveWidth(4),
     elevation: 3,
@@ -234,17 +234,15 @@ const styles = StyleSheet.create({
     marginBottom: responsiveHeight(2),
   },
   addButton: {
-    backgroundColor: "skyblue",
-    padding: 10,
-    borderRadius: 5,
-    width: responsiveWidth(70),
-    justifyContent: "center",
+    backgroundColor: "#007bff",
+    padding: responsiveHeight(1.5),
+    borderRadius: responsiveHeight(1),
     alignItems: "center",
   },
   cancelbtn: {
-     alignSelf: "flex-end",
+    alignSelf: "flex-end",
     backgroundColor: "red",
     borderRadius: responsiveHeight(5),
-    padding:responsiveHeight(1)
+    padding: responsiveHeight(1),
   },
 });
