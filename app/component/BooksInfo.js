@@ -146,15 +146,17 @@ const styles = StyleSheet.create({
     textAlign:"center"
   },
   addcontainer: {
-     marginTop:responsiveHeight(1),
-     marginLeft:responsiveWidth(73),
+    position:"absolute",
+    bottom:responsiveHeight(1),
+    right:responsiveWidth(5),
      backgroundColor:"blue",
-     height:responsiveHeight(12),
-     width:responsiveHeight(12),
-     borderRadius:responsiveHeight(6),
+     height:responsiveHeight(6),
+     width:responsiveHeight(6),
+     borderRadius:responsiveHeight(3),
+     elevation: 5, 
+     shadowColor: "#000", 
      alignItems:"center",
      justifyContent:"center",  
-     position:"static"
     
   },
   add: {
