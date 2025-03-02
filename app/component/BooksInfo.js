@@ -57,7 +57,7 @@ getAPIData();
         {data.length ? (
           <FlatList
             data={data}
-            showsVerticalScrollIndicator={false}
+            showsVerticalScrollIndicator={true}
             keyExtractor={(item) => item.id}
             numColumns={2}
             renderItem={({ item }) => (
@@ -126,7 +126,6 @@ const styles = StyleSheet.create({
     padding: responsiveWidth(1),
     backgroundColor: "#edede9",
     height: responsiveHeight(100),
-
   },
 
   bookContainer: {
