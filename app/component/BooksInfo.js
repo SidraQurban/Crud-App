@@ -87,8 +87,8 @@ getAPIData();
           >
             <View style={styles.modal}>
               <View style={styles.centerText}>
-                <TouchableOpacity>
-                  <Entypo name="cross" size={30}/>
+                <TouchableOpacity onPress={() => setModalVisible(false)} style={styles.cancelbtn}>
+                  <Entypo name="cross" size={25}/>
                 </TouchableOpacity>
                 {/* image */}
               {/* <TextInput
@@ -102,7 +102,8 @@ getAPIData();
                     Please select Image
                   </Text>
                 ) : null} */}
-                <TextInput
+               <View style={{marginTop:responsiveHeight(3)}}>
+               <TextInput
                   style={styles.input}
                   value={bookName}
                   onChangeText={(text) => setBookName(text)}
@@ -125,6 +126,7 @@ getAPIData();
                     Please enter Valid Author Name
                   </Text>
                 ) : null}
+               </View>
                 <TouchableOpacity onPress={() => setModalVisible(false)}>
                   <TouchableOpacity onPress={saveData} style={styles.addButton}>
                     <Text
@@ -150,7 +152,7 @@ export default BooksInfo;
 
 const styles = StyleSheet.create({
   container: {
-    flex:1,
+    flex: 1,
     padding: responsiveWidth(1),
     backgroundColor: "#edede9",
     height: responsiveHeight(100),
@@ -158,71 +160,77 @@ const styles = StyleSheet.create({
 
   bookContainer: {
     flex: 1,
-    marginTop:responsiveHeight(3)
+    marginTop: responsiveHeight(3),
   },
 
-  bookname:{
-    fontSize:responsiveFontSize(1.8),
-    fontWeight:"bold",
-    textAlign:"center"
+  bookname: {
+    fontSize: responsiveFontSize(1.8),
+    fontWeight: "bold",
+    textAlign: "center",
   },
 
-  author : {
-    fontSize:responsiveFontSize(1.5),
-    color:"#6c757d",
-    textAlign:"center"
+  author: {
+    fontSize: responsiveFontSize(1.5),
+    color: "#6c757d",
+    textAlign: "center",
   },
   addcontainer: {
-    position:"absolute",
-    bottom:responsiveHeight(1),
-    right:responsiveWidth(5),
-     backgroundColor:"blue",
-     height:responsiveHeight(6),
-     width:responsiveHeight(6),
-     borderRadius:responsiveHeight(3),
-     elevation: 5, 
-     shadowColor: "#000", 
-     alignItems:"center",
-     justifyContent:"center",  
-    
+    position: "absolute",
+    bottom: responsiveHeight(1),
+    right: responsiveWidth(5),
+    backgroundColor: "blue",
+    height: responsiveHeight(6),
+    width: responsiveHeight(6),
+    borderRadius: responsiveHeight(3),
+    elevation: 5,
+    shadowColor: "#000",
+    alignItems: "center",
+    justifyContent: "center",
   },
   add: {
-    fontWeight:"bold",
+    fontWeight: "bold",
   },
   modal: {
     flex: 1,
-    backgroundColor: "rgba(0, 0, 0, 0.5)", 
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
     justifyContent: "center",
     alignItems: "center",
   },
   centerText: {
-    backgroundColor:"#fff",
-    height:responsiveHeight(40),
-    width:responsiveWidth(80),
-    alignItems:"center",
+    backgroundColor: "#fff",
+    height: responsiveHeight(40),
+    width: responsiveWidth(80),
+    alignItems: "center",
   },
   input: {
-      borderColor:"skyblue",
-      borderWidth:1,
-      padding:10,
-      marginBottom:10,
-      width:responsiveWidth(70),
-      fontSize:responsiveFontSize(2),
-      marginTop:responsiveHeight(2)
+    borderColor: "skyblue",
+    borderWidth: 1,
+    padding: 10,
+    marginBottom: responsiveHeight(2),
+    width: responsiveWidth(70),
+    fontSize: responsiveFontSize(2),
+    marginTop: responsiveHeight(1),
   },
-  errorText:{
-    color:"#ff0000",
-    marginRight:responsiveWidth(21),
-    marginTop:responsiveHeight(-1),
-    marginBottom:responsiveHeight(2)
+  errorText: {
+    color: "#ff0000",
+    marginRight: responsiveWidth(21),
+    marginTop: responsiveHeight(-1),
+    marginBottom: responsiveHeight(2),
   },
   addButton: {
-    backgroundColor:"skyblue",
-    padding:10,
-    borderRadius:5,
-    width:responsiveWidth(70),
-    marginTop:responsiveHeight(2),
-    justifyContent:"center",
-    alignItems:"center",
-  }
+    backgroundColor: "skyblue",
+    padding: 10,
+    borderRadius: 5,
+    width: responsiveWidth(70),
+    marginTop: responsiveHeight(2),
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  cancelbtn: {
+    position: "absolute",
+    left: responsiveWidth(72.5),
+    top: responsiveHeight(0.5),
+    backgroundColor: "red",
+    borderRadius: responsiveHeight(2),
+  },
 });
