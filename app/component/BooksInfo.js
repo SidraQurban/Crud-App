@@ -60,7 +60,7 @@ getAPIData();
             showsVerticalScrollIndicator={true}
             keyExtractor={(item) => item.id}
             numColumns={2}
-            contentContainerStyle={{paddingBottom:responsiveHeight(8)}}
+            contentContainerStyle={{ paddingBottom: responsiveHeight(8) }}
             renderItem={({ item }) => (
               <View style={styles.bookContainer}>
                 <Text style={styles.bookname}>{item.bookname}</Text>
@@ -91,6 +91,7 @@ getAPIData();
                   onChangeText={(text) => setBookName(text)}
                   placeholder="Enter Book Name"
                 />
+
                 {bookNameError ? (
                   <Text style={styles.errorText}>
                     Please enter Valid Book Name
@@ -108,7 +109,10 @@ getAPIData();
                   </Text>
                 ) : null}
                 <TouchableOpacity onPress={() => setModalVisible(false)}>
-                  <Button title="Add" onPress={saveData} />
+                  <TouchableOpacity
+                    onPress={saveData} style={styles.addButton}>
+                    <Text>Add Book</Text>
+                  </TouchableOpacity>
                 </TouchableOpacity>
               </View>
             </View>
@@ -180,15 +184,22 @@ const styles = StyleSheet.create({
       padding:10,
       marginBottom:10,
       width:responsiveWidth(70),
-      fontSize:responsiveFontSize(2)
+      fontSize:responsiveFontSize(2),
+      marginTop:responsiveHeight(2)
   },
   errorText:{
     color:"#ff0000",
-    marginLeft:responsiveWidth(-22),
+    marginRight:responsiveWidth(21),
     marginTop:responsiveHeight(-1),
     marginBottom:responsiveHeight(2)
   },
   addButton: {
-    
+    backgroundColor:"skyblue",
+    padding:10,
+    borderRadius:5,
+    width:responsiveWidth(70),
+    marginTop:responsiveHeight(2),
+    justifyContent:"center",
+    alignItems:"center",
   }
 });
