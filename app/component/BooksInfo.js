@@ -1,7 +1,6 @@
 import { View, Text,StyleSheet, FlatList, TouchableOpacity, Modal, TextInput, Button } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
-import AddBooks from './AddBooks';
 import {MaterialIcons,Entypo} from "react-native-vector-icons";
 
 const BooksInfo = () => {
