@@ -61,6 +61,13 @@ const deleteData = async (id) => {
   }
 }
 
+const editData= async()=>{
+const url="http://10.0.2.2:3000/books";
+let result = await fetch(url,{
+  method:"GET",
+});
+}
+
 useEffect(()=>{ 
 getAPIData(); 
 },[])  
