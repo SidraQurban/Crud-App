@@ -49,6 +49,18 @@ const saveData= async()=>{
   }
 }
 
+const deleteData = async (id) => {
+  const url = "http://10.0.2.2:3000/books";
+  let result = await fetch(`${url}/${id}`,{
+    method:"DELETE",
+  });
+  result = await result.json();
+  if(result){
+    console.warn("Book deleted successfully");
+    await getAPIData();
+  }
+}
+
 useEffect(()=>{ 
 getAPIData(); 
 },[])  
@@ -71,7 +83,7 @@ getAPIData();
                   <TouchableOpacity>
                     <MaterialIcons name="edit" size={25} color="blue"/>
                   </TouchableOpacity>
-                  <TouchableOpacity>
+                  <TouchableOpacity onPress={() => deleteData(item.id)}>
                     <MaterialIcons name="delete" size={25} color="red" />
                   </TouchableOpacity>
                 </View>

@@ -6,14 +6,21 @@ import BooksInfo from '../component/BooksInfo';
 const Home = () => {
   return (
     <>
-    <SafeAreaView>
-      <View style={styles.container}>
-        <Text style={styles.mainText}>MyBookList 📚 </Text>
-      </View>
-    </SafeAreaView>
-     <BooksInfo />
-     
-     <StatusBar barStyle="light-content" backgroundColor="#000" />
+      <SafeAreaView>
+        <View style={styles.container}>
+          <Text style={styles.mainText}>MyBookList 📚 </Text>
+          <View
+            style={{
+              margin: responsiveHeight(1),
+              borderWidth: 0.2,
+              borderColor: "grey",
+            }}
+          />
+        </View>
+      </SafeAreaView>
+      <BooksInfo />
+
+      <StatusBar barStyle="light-content" backgroundColor="#000" />
     </>
   );
 }
@@ -26,7 +33,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#edede9',   
    },
    mainText: {
-    fontSize: responsiveFontSize(2),
+    fontSize: responsiveFontSize(2.5),
     fontWeight: 'bold',
     textAlign: 'center',
     marginVertical:responsiveHeight(2)
