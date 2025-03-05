@@ -25,7 +25,6 @@ const url="http://10.0.2.2:3000/books";
     console.log(result); 
     setData(result);    
 }
-
 const saveData= async()=>{
   setBookNameError(!bookName ? true : false);
   setAuthorNameError(!authorName ? true : false);
@@ -33,7 +32,6 @@ const saveData= async()=>{
   if (!bookName || !authorName) {
     return false;
   }
-
   const url = "http://10.0.2.2:3000/books";
   let result = await fetch(url, {
     method: "POST",
