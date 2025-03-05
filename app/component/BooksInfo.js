@@ -69,7 +69,6 @@ let result = await fetch(url,{
   method:"GET",
 });
 }
-
  
 
   return (
