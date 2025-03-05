@@ -70,7 +70,6 @@ let result = await fetch(url,{
 });
 }
  
-
   return (
     <View style={styles.container}>
       <View>
