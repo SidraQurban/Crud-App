@@ -57,7 +57,6 @@ const deleteData = async (id) => {
     method:"DELETE",
   });
   result = await result.json();
-  
   if(result){
     console.warn("Book deleted successfully");
     await getAPIData();
