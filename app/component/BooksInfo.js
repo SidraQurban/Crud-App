@@ -69,7 +69,7 @@ let result = await fetch(url,{
   method:"GET",
 });
 }
-     
+         
   return (
     <View style={styles.container}>
       <View>
