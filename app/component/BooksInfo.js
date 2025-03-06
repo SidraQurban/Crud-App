@@ -183,7 +183,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     marginTop: responsiveHeight(1),
   },
-
   bookContainer: {
     flex: 1,
     margin: responsiveHeight(2),
