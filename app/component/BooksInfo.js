@@ -230,6 +230,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     width: responsiveWidth(80),
   },
+  
   input: {
     borderColor: "#ddd",
     borderWidth: 1,
@@ -238,7 +239,7 @@ const styles = StyleSheet.create({
     borderRadius: responsiveHeight(1),
     fontSize: responsiveFontSize(2),
   },
-  
+
   errorText: {
     color: "#ff0000",
     marginRight: responsiveWidth(21),
