@@ -223,7 +223,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-
   centerText: {
     backgroundColor: "#fff",
     padding: responsiveWidth(5),
