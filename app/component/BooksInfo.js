@@ -214,7 +214,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     elevation: 5,
   },
-
   add: {
     fontWeight: "bold",
   },
