@@ -238,6 +238,7 @@ const styles = StyleSheet.create({
     borderRadius: responsiveHeight(1),
     fontSize: responsiveFontSize(2),
   },
+  
   errorText: {
     color: "#ff0000",
     marginRight: responsiveWidth(21),
@@ -258,5 +259,5 @@ const styles = StyleSheet.create({
     borderRadius: responsiveHeight(5),
     padding: responsiveHeight(1),
   }
-  
+
 });
