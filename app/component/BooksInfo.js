@@ -196,13 +196,14 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
   },
+  
   author: {
     fontSize: responsiveFontSize(1.5),
     color: "#6c757d",
     textAlign: "center",
     marginBottom: responsiveHeight(1),
   },
-  
+
   addcontainer: {
     position: "absolute",
     bottom: responsiveHeight(3),
