@@ -230,7 +230,6 @@ const styles = StyleSheet.create({
     elevation: 5,
     width: responsiveWidth(80),
   },
-
   input: {
     borderColor: "#ddd",
     borderWidth: 1,
