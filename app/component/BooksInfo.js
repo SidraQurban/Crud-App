@@ -202,6 +202,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: responsiveHeight(1),
   },
+  
   addcontainer: {
     position: "absolute",
     bottom: responsiveHeight(3),
@@ -214,7 +215,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     elevation: 5,
   },
-  
+
   add: {
     fontWeight: "bold",
   },
