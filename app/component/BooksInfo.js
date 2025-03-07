@@ -196,7 +196,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
   },
-  
   author: {
     fontSize: responsiveFontSize(1.5),
     color: "#6c757d",
