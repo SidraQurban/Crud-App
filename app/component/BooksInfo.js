@@ -223,6 +223,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  
   centerText: {
     backgroundColor: "#fff",
     padding: responsiveWidth(5),
@@ -230,7 +231,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     width: responsiveWidth(80),
   },
-  
+
   input: {
     borderColor: "#ddd",
     borderWidth: 1,
