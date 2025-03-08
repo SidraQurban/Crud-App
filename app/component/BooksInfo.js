@@ -244,8 +244,7 @@ const styles = StyleSheet.create({
     marginTop: responsiveHeight(-1),
     marginBottom: responsiveHeight(2),
   },
-  addButton:
-   {
+  addButton:   {
     backgroundColor: "#007bff",
     padding: responsiveHeight(1.5),
     borderRadius: responsiveHeight(1),
