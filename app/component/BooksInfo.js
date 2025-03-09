@@ -250,7 +250,6 @@ const styles = StyleSheet.create({
     borderRadius: responsiveHeight(1),
     alignItems: "center",
   },
-
   cancelbtn: {
     alignSelf: "flex-end",
     backgroundColor: "red",
