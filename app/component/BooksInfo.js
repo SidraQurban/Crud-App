@@ -248,7 +248,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#007bff",
     padding: responsiveHeight(1.5),
     borderRadius: responsiveHeight(1),
-    alignItems: "center",
+    alignItems: "center",             
   },
   cancelbtn: {
     alignSelf: "flex-end",
