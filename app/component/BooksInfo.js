@@ -254,7 +254,7 @@ const styles = StyleSheet.create({
     alignSelf: "flex-end",
     backgroundColor: "red",
     borderRadius: responsiveHeight(5),
-    dding: responsiveHeight(1),    
+    padding: responsiveHeight(1),    
 
 
   }
