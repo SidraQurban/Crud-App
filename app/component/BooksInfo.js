@@ -110,8 +110,7 @@ let result = await fetch(url,{
                 </TouchableOpacity>
                 {/* image */}
              
-                  style={styles.input}
-                  value={uploadImage}
+                 
                   onChangeText={(text) => setUploadImage(text)}
                   placeholder="Upload Image..."
                
