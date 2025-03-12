@@ -111,8 +111,7 @@ let result = await fetch(url,{
                 {/* image */}
              
                  
-                  onChangeText={(text) => setUploadImage(text)}
-                  placeholder="Upload Image..."
+                 
                
                <View style={{marginTop:responsiveHeight(3)}}>
                <TextInput
