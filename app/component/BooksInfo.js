@@ -118,8 +118,7 @@ let result = await fetch(url,{
                  {uploadImageError ? (
                   <Text style={styles.errorText}>
                     Please select Image
-                  </Text>
-                ) : null} */}
+                  <}
                <View style={{marginTop:responsiveHeight(3)}}>
                <TextInput
                   style={styles.input}
