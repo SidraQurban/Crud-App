@@ -46,7 +46,6 @@ const saveData= async()=>{
     await getAPIData();
     setBookName("");
     setAuthorName("");
-    // setUploadImage("");
     setModalVisible(false);
   }
 }
