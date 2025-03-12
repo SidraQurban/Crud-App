@@ -10,7 +10,7 @@ const[modalVisible, setModalVisible] = useState(false);
 // const[uploadImage,setUploadImage] = useState('');
 const[bookName,setBookName] = useState('');
 const[authorName,setAuthorName] = useState('');
-// const[uploadImageError,setUploadImageError] = useState('');
+// const[uploadImageError,setUploadImageError] = 
 const[bookNameError,setBookNameError] = useState('');
 const[authorNameError,setAuthorNameError] = useState('');
 
