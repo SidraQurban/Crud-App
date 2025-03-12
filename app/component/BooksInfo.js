@@ -109,7 +109,7 @@ let result = await fetch(url,{
                   <Entypo name="cross" size={25}/>
                 </TouchableOpacity>
                 {/* image */}
-              {/* <TextInput
+             
                   style={styles.input}
                   value={uploadImage}
                   onChangeText={(text) => setUploadImage(text)}
