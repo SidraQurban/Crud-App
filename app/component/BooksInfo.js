@@ -108,8 +108,7 @@ let result = await fetch(url,{
                 <TouchableOpacity onPress={() => setModalVisible(false)} style={styles.cancelbtn}>
                   <Entypo name="cross" size={25}/>
                 </TouchableOpacity>
-               
-               
+                      
                <View style={{marginTop:responsiveHeight(3)}}>
                <TextInput
                   style={styles.input}
