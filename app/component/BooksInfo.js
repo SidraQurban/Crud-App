@@ -109,8 +109,7 @@ let result = await fetch(url,{
                   <Entypo name="cross" size={25}/>
                 </TouchableOpacity>
                
-             
-                 
+               
                <View style={{marginTop:responsiveHeight(3)}}>
                <TextInput
                   style={styles.input}
