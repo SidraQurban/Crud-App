@@ -114,11 +114,7 @@ let result = await fetch(url,{
                   value={uploadImage}
                   onChangeText={(text) => setUploadImage(text)}
                   placeholder="Upload Image..."
-                />
-                 {uploadImageError ? (
-                  <Text style={styles.errorText}>
-                    Please select Image
-                  <}
+               
                <View style={{marginTop:responsiveHeight(3)}}>
                <TextInput
                   style={styles.input}
