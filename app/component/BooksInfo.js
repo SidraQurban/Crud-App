@@ -111,7 +111,6 @@ let result = await fetch(url,{
                
              
                  
-                 
                <View style={{marginTop:responsiveHeight(3)}}>
                <TextInput
                   style={styles.input}
