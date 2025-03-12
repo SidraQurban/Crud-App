@@ -7,7 +7,6 @@ const BooksInfo = () => {
 
 const [data,setData] = useState([]);
 const[modalVisible, setModalVisible] = useState(false);
-// const[uploadImage,setUploadImage] = useState('');
 const[bookName,setBookName] = useState('');
 const[authorName,setAuthorName] = useState('');
 const[bookNameError,setBookNameError] = useState('');
