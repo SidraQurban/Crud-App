@@ -113,7 +113,7 @@ let result = await fetch(url,{
                   style={styles.input}
                   value={bookName}
                   onChangeText={(text) => setBookName(text)}
-                  placeholder="Enter Book Name"
+                  placeholder="Enter Book Name"    
                 />
                 {bookNameError ? (
                   <Text style={styles.errorText}>
