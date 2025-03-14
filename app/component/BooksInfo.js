@@ -118,7 +118,6 @@ let result = await fetch(url,{
 
 
 
-                  
                 />
                 {bookNameError ? (
                   <Text style={styles.errorText}>
