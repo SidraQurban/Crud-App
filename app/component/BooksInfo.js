@@ -20,6 +20,7 @@ const url="http://10.0.2.2:3000/books";
     let result = await fetch(url);
     result = await result.json();
     console.log(result); 
+    
     setData(result);    
 }
 const saveData= async()=>{
