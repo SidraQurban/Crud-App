@@ -45,6 +45,7 @@ const saveData= async()=>{
     setBookName("");
     setAuthorName("");
     setModalVisible(false);
+    
   }
 }
 
