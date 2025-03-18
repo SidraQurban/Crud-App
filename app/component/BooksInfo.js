@@ -236,7 +236,6 @@ const styles = StyleSheet.create({
     alignItems: "center",  
 
 
-
   },
   cancelbtn: {
     alignSelf: "flex-end",
