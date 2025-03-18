@@ -237,7 +237,6 @@ const styles = StyleSheet.create({
 
 
 
-    
   },
   cancelbtn: {
     alignSelf: "flex-end",
