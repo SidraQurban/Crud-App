@@ -230,13 +230,14 @@ const styles = StyleSheet.create({
     marginTop: responsiveHeight(-1),
     marginBottom: responsiveHeight(2),
   },
-  
+
   addButton:{
     backgroundColor: "#007bff",
     padding: responsiveHeight(1.5),
     borderRadius: responsiveHeight(1),
     alignItems: "center", 
   },
+  
   cancelbtn: {
     alignSelf: "flex-end",
     backgroundColor: "red",
