@@ -224,6 +224,7 @@ const styles = StyleSheet.create({
     fontSize: responsiveFontSize(2),
   },
   errorText: {
+    
     color: "#ff0000",
     marginRight: responsiveWidth(21),
     marginTop: responsiveHeight(-1),
@@ -234,7 +235,7 @@ const styles = StyleSheet.create({
     padding: responsiveHeight(1.5),
     borderRadius: responsiveHeight(1),
     alignItems: "center", 
-    
+
   },
   cancelbtn: {
     alignSelf: "flex-end",
