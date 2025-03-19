@@ -223,8 +223,7 @@ const styles = StyleSheet.create({
     borderRadius: responsiveHeight(1),
     fontSize: responsiveFontSize(2),
   },
-  errorText: {    
-
+  errorText: {  
     color: "#ff0000",
     marginRight: responsiveWidth(21),
     marginTop: responsiveHeight(-1),
