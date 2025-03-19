@@ -228,7 +228,6 @@ const styles = StyleSheet.create({
     marginRight: responsiveWidth(21),
     marginTop: responsiveHeight(-1),
     marginBottom: responsiveHeight(2),
-
   },
   addButton:{
     backgroundColor: "#007bff",
