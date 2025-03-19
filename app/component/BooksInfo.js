@@ -237,7 +237,6 @@ const styles = StyleSheet.create({
   },
   cancelbtn: {
     alignSelf: "flex-end",
-
     backgroundColor: "red",
     borderRadius: responsiveHeight(5),
     padding: responsiveHeight(1),    
