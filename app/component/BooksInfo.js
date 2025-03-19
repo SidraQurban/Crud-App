@@ -223,13 +223,14 @@ const styles = StyleSheet.create({
     borderRadius: responsiveHeight(1),
     fontSize: responsiveFontSize(2),
   },
-  
+
   errorText: {
     color: "#ff0000",
     marginRight: responsiveWidth(21),
     marginTop: responsiveHeight(-1),
     marginBottom: responsiveHeight(2),
   },
+  
   addButton:{
     backgroundColor: "#007bff",
     padding: responsiveHeight(1.5),
