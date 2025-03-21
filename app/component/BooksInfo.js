@@ -175,6 +175,7 @@ const styles = StyleSheet.create({
     padding: responsiveWidth(2),
     borderRadius: responsiveWidth(4),
     elevation: 3,
+    
   },
   bookname: {
     fontSize: responsiveFontSize(1.8),
