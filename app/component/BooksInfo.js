@@ -4,7 +4,6 @@ import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-nat
 import {MaterialIcons,Entypo} from "react-native-vector-icons";
 
 const BooksInfo = () => {
-
 const [data,setData] = useState([]);
 const[modalVisible, setModalVisible] = useState(false);
 const[bookName,setBookName] = useState('');
