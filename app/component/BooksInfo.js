@@ -2,7 +2,6 @@ import { View, Text,StyleSheet, FlatList, TouchableOpacity, Modal, TextInput, Bu
 import React, { useEffect, useState } from 'react'
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
 import {MaterialIcons,Entypo} from "react-native-vector-icons";
-
 const BooksInfo = () => {
 const [data,setData] = useState([]);
 const[modalVisible, setModalVisible] = useState(false);
