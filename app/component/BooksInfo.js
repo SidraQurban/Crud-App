@@ -60,7 +60,7 @@ const deleteData = async (id) => {
     console.warn("Book deleted successfully");
     await getAPIData();
     setBookName("");
-    set
+    
     
 }
 }
