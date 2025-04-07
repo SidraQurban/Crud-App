@@ -48,6 +48,7 @@ const saveData= async()=>{
   }
 }
 
+
 // Delete book
 const deleteData = async (id) => {
   const url = "http://10.0.2.2:3000/books";
@@ -58,6 +59,8 @@ const deleteData = async (id) => {
   if(result){
     console.warn("Book deleted successfully");
     await getAPIData();
+    result,
+    op,
   }
 }
 
