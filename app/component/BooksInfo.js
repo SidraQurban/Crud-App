@@ -62,8 +62,6 @@ const deleteData = async (id) => {
 
 
 
-
-    
   }
 }
 
