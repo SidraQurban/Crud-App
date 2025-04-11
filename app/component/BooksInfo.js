@@ -60,8 +60,8 @@ const deleteData = async (id) => {
     console.warn("Book deleted successfully");
     await getAPIData();
 
-    setBookName("");
-    setAuthorName("");
+    setBookName("")
+    setAuthorName("")
   }
 }
 
