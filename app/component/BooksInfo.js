@@ -61,7 +61,6 @@ const deleteData = async (id) => {
     await getAPIData();
 
     setBookName("")
-    set
   }
 }
 
