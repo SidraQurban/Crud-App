@@ -93,7 +93,6 @@ let result = await fetch(url,{
           />
         )
          : null}
-
         {/* AddBooks */}
         <View style={styles.addcontainer}>
           <TouchableOpacity onPress={() => setModalVisible(true)}>
