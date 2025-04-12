@@ -60,7 +60,6 @@ const deleteData = async (id) => {
     await getAPIData();
   }
 }
-
 // Edit book
 const editData= async()=>{
 const url="http://10.0.2.2:3000/books";
