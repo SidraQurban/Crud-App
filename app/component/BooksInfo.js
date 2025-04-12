@@ -48,7 +48,6 @@ const saveData= async()=>{
   }
 }
 
-
 // Delete book
 const deleteData = async (id) => {
   const url = "http://10.0.2.2:3000/books";
