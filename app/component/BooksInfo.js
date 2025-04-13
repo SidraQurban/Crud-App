@@ -82,7 +82,7 @@ let result = await fetch(url,{
                 {/* Edit and delete button */}
                 <View style={styles.actionbtn}>
                   <TouchableOpacity>
-                    <MaterialIcons name="edit" size={25} color="blue"/>
+                    <MaterialIcons name="edit" size={25} color="blue" />
                   </TouchableOpacity>
                   <TouchableOpacity onPress={() => deleteData(item.id)}>
                     <MaterialIcons name="delete" size={25} color="red" />
@@ -91,47 +91,50 @@ let result = await fetch(url,{
               </View>
             )}
           />
-        )
-         : null}
+        ) : null}
         {/* AddBooks */}
         <View style={styles.addcontainer}>
           <TouchableOpacity onPress={() => setModalVisible(true)}>
-            <MaterialIcons name="add" size={30} style={styles.add}/>
+            <MaterialIcons name="add" size={30} style={styles.add} />
           </TouchableOpacity>
           {/* Modal */}
           <Modal
             visible={modalVisible}
             transparent={true}
-            animationType="slide">
+            animationType="slide"
+          >
             <View style={styles.modal}>
               <View style={styles.centerText}>
-                <TouchableOpacity onPress={() => setModalVisible(false)} style={styles.cancelbtn}>
-                  <Entypo name="cross" size={25}/>
-                </TouchableOpacity>                      
-               <View style={{marginTop:responsiveHeight(3)}}>
-               <TextInput
-                  style={styles.input}
-                  value={bookName}
-                  onChangeText={(text) => setBookName(text)}
-                  placeholder="Enter Book Name"
-                />
-                {bookNameError ? (
-                  <Text style={styles.errorText}>
-                    Please enter Valid Book Name
-                  </Text>
-                ) : null}
-                <TextInput
-                  style={styles.input}
-                  value={authorName}
-                  onChangeText={(text) => setAuthorName(text)}
-                  placeholder="Enter Author Name"
-                />
-                {authorNameError ? (
-                  <Text style={styles.errorText}>
-                    Please enter Valid Author Name
-                  </Text>
-                ) : null}
-               </View>
+                <TouchableOpacity
+                  onPress={() => setModalVisible(false)}
+                  style={styles.cancelbtn}
+                >
+                  <Entypo name="cross" size={25} />
+                </TouchableOpacity>
+                <View style={{ marginTop: responsiveHeight(3) }}>
+                  <TextInput
+                    style={styles.input}
+                    value={bookName}
+                    onChangeText={(text) => setBookName(text)}
+                    placeholder="Enter Book Name"
+                  />
+                  {bookNameError ? (
+                    <Text style={styles.errorText}>
+                      Please enter Valid Book Name
+                    </Text>
+                  ) : null}
+                  <TextInput
+                    style={styles.input}
+                    value={authorName}
+                    onChangeText={(text) => setAuthorName(text)}
+                    placeholder="Enter Author Name"
+                  />
+                  {authorNameError ? (
+                    <Text style={styles.errorText}>
+                      Please enter Valid Author Name
+                    </Text>
+                  ) : null}
+                </View>
                 <TouchableOpacity onPress={() => setModalVisible(false)}>
                   <TouchableOpacity onPress={saveData} style={styles.addButton}>
                     <Text
@@ -143,7 +146,6 @@ let result = await fetch(url,{
                       Add Book
                     </Text>
                   </TouchableOpacity>
-                  
                 </TouchableOpacity>
               </View>
             </View>
