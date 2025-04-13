@@ -155,6 +155,7 @@ let result = await fetch(url,{
     </View>
   );
 }
+
 export default BooksInfo;
 
 const styles = StyleSheet.create({
