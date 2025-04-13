@@ -103,7 +103,6 @@ let result = await fetch(url,{
             visible={modalVisible}
             transparent={true}
             animationType="slide">
-
             <View style={styles.modal}>
               <View style={styles.centerText}>
                 <TouchableOpacity onPress={() => setModalVisible(false)} style={styles.cancelbtn}>
