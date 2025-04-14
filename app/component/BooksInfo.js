@@ -147,7 +147,7 @@ let result = await fetch(url,{
                     </Text>
                   </TouchableOpacity>
                 </TouchableOpacity>
-                
+
               </View>
             </View>
           </Modal>
@@ -161,7 +161,7 @@ export default BooksInfo;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    bac
+    
     padding: responsiveWidth(2),
     backgroundColor: "#edede9",
   },
