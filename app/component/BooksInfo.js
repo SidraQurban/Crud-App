@@ -156,6 +156,7 @@ let result = await fetch(url,{
   );
 }
 export default BooksInfo;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,    
