@@ -148,7 +148,7 @@ let result = await fetch(url,{
 
                   </TouchableOpacity>
                 </TouchableOpacity>
-                
+
               </View>
             </View>
           </Modal>
