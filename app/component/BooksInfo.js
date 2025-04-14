@@ -153,7 +153,6 @@ let result = await fetch(url,{
           </Modal>
         </View>
       </View>
-
     </View>
   );
 }
