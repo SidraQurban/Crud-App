@@ -145,9 +145,10 @@ let result = await fetch(url,{
                     >
                       Add Book
                     </Text>
-                    
+
                   </TouchableOpacity>
                 </TouchableOpacity>
+                
               </View>
             </View>
           </Modal>
