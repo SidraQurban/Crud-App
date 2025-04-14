@@ -159,7 +159,7 @@ export default BooksInfo;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 
+    backgroundColo
     padding: responsiveWidth(2),
     backgroundColor: "#edede9",
   },
