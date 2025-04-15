@@ -244,5 +244,4 @@ const styles = StyleSheet.create({
     marginBottom: responsiveHeight(2),
 
   }
-
 });
