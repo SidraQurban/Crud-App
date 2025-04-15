@@ -246,5 +246,4 @@ const styles = StyleSheet.create({
   }
 
 
-
 });
