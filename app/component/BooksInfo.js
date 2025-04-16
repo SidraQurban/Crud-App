@@ -241,6 +241,6 @@ const styles = StyleSheet.create({
     borderRadius: responsiveHeight(5),
     padding: responsiveHeight(1),  
     marginTop: responsiveHeight(-3),  
-    
+
   }
 });
