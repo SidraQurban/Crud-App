@@ -241,8 +241,8 @@ const styles = StyleSheet.create({
     borderRadius: responsiveHeight(5),
     padding: responsiveHeight(1),  
     
-    
-    
+
+
     marginBottom: responsiveHeight(2),
   }
 });
