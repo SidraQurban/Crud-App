@@ -242,6 +242,7 @@ const styles = StyleSheet.create({
     padding: responsiveHeight(1),  
     
     
+    
     marginBottom: responsiveHeight(2),
   }
 });
