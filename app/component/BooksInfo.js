@@ -242,5 +242,6 @@ const styles = StyleSheet.create({
     padding: responsiveHeight(1),  
 
     
+    
   }
 });
