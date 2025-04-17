@@ -240,5 +240,8 @@ const styles = StyleSheet.create({
     backgroundColor: "red",
     borderRadius: responsiveHeight(5),
     padding: responsiveHeight(1),  
+
+    marginBottom: responsiveHeight(2),
+    
   }
 });
