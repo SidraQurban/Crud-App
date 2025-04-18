@@ -248,7 +248,6 @@ const styles = StyleSheet.create({
       height: 2,
       actionbtn: 0.2,
 
-
     },
   }
 });
