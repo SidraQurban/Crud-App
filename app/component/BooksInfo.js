@@ -243,5 +243,9 @@ const styles = StyleSheet.create({
     backfaceVisibility:"hidden",
     marginBottom: responsiveHeight(2),
     shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
   }
 });
