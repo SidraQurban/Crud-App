@@ -242,6 +242,6 @@ const styles = StyleSheet.create({
     padding: responsiveHeight(1),  
     backfaceVisibility:"hidden",
     marginBottom: responsiveHeight(2),
-    
+    shadowColor: "#000",
   }
 });
