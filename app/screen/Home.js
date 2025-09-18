@@ -6,6 +6,7 @@ import {
   responsiveWidth,
 } from "react-native-responsive-dimensions";
 import { SafeAreaView } from "react-native-safe-area-context";
+import firebase from "../../firebaseConnection";
 
 const Home = () => {
   return (
