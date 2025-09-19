@@ -15,3 +15,4 @@ const app = initializeApp(firebaseConfig);
 
 expot;
 export default app;
+export default app;
